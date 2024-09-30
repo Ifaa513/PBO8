@@ -8,49 +8,7 @@ Aplikasi ini dibuat dengan menggunakan:
 - [PostgreSQL](https://www.postgresql.org/download/) - PostgreSQL adalah sistem manajemen basis data berbasis objek yang bersifat open source, dalam aplikasi ini database PostgreSQL dikoneksikan menggunakan JDBC.
 - [NetBeans IDE](https://netbeans.apache.org/download/index.html) - NetBeans IDE adalah Integrated Development Environment (IDE) yang berifat open source yang digunakan untuk pengembangan aplikasi, terutama aplikasi Java. NetBeans juga mendukung berbagai bahasa pemrograman lain seperti PHP, HTML5, JavaScript, C/C++, dll.
 ## 🔭 Features
-### 1. 🎬 Insert (Create)
-private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        String ID_Buku, Judul_Buku, Pengarang, Penerbit, Tahun_Terbit;
-        try {
-            Class.forName(driver);
-            conn = DriverManager.getConnection(koneksi, user, password);
-            conn.setAutoCommit(false);
-
-            String sql = "INSERT INTO Buku (ID_Buku, Judul_Buku, Pengarang, Penerbit, Tahun_Terbit) VALUES(?, ?, ?, ?, ?)";
-            pstmt = conn.prepareStatement(sql);
-
-            ID_Buku = txtID.getText();
-            Judul_Buku = txtJudul.getText();
-            Pengarang = txtPengarang.getText();
-            Penerbit = txtPenerbit.getText();
-            Tahun_Terbit = txtTahun.getText();
-
-            pstmt.setInt(1, Integer.parseInt(ID_Buku));
-            pstmt.setString(2, Judul_Buku);
-            pstmt.setString(3, Pengarang);
-            pstmt.setString(4, Penerbit);
-            pstmt.setInt(5, Integer.parseInt(Tahun_Terbit));
-
-            pstmt.executeUpdate(); // executeUpdate hanya dipanggil sekali
-            conn.commit();
-
-            JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
-        } catch (ClassNotFoundException | SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Terjadi kesalahan: " + ex.getMessage());
-        } finally {
-            try {
-                if (pstmt != null) {
-                    pstmt.close();
-                }
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        tampil();
-    } 
+### 1. 🎬 [Insert (Create)](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
 Saat pengguna menekan tombol INSERT, data buku yang dimasukkan pada form akan disimpan ke dalam database dengan menggunakan perintah INSERT INTO. Data ini dimasukkan ke dalam tabel Buku di PostgreSQL.
 ### 2. 🔎 Read 
 Fungsi tampil() digunakan untuk mengambil data dari tabel Buku dan menampilkannya di tabel GUI. Setiap kali ada perubahan baik insert, update, dan delete, data akan diperbarui dan ditampilkan kembali.
