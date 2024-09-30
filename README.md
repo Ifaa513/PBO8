@@ -10,9 +10,11 @@ Aplikasi ini dibuat dengan menggunakan:
 ## 🔭 Features
 ### 1. 🎬 [Insert (Create)](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
 Saat pengguna menekan tombol INSERT, data buku yang dimasukkan pada form akan disimpan ke dalam database dengan menggunakan perintah INSERT INTO. Data ini dimasukkan ke dalam tabel Buku di PostgreSQL.
-### 2. 🔎 Read 
+### 2. 🔎 [Tampil (Read)](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java) 
 Fungsi tampil() digunakan untuk mengambil data dari tabel Buku dan menampilkannya di tabel GUI. Setiap kali ada perubahan baik insert, update, dan delete, data akan diperbarui dan ditampilkan kembali.
-### 3. ✏️ Update
+### 3. ✏️ [Update](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
 Saat pengguna memilih data buku di tabel dan menekan tombol UPDATE, data buku yang sudah dimodifikasi pada form akan diperbarui di database dengan menggunakan perintah UPDATE.
-### 4. ❌ Delete 
+### 4. ❌ [Delete](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
 Fungsi ini memungkinkan pengguna untuk menghapus data buku berdasarkan ID_Buku. Perintah DELETE FROM digunakan untuk menghapus data dari database.
+## 🐙 [DbUtils]()
+Program ini adalah sebuah utility class bernama DbUtils yang menyediakan metode untuk mengubah hasil query dari database berupa ResultSet menjadi objek TableModel. TableModel digunakan untuk menampilkan data dalam komponen GUI seperti JTable di Java Swing.
