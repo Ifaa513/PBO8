@@ -16,5 +16,11 @@ Fungsi tampil() digunakan untuk mengambil data dari tabel Buku dan menampilkanny
 Saat pengguna memilih data buku di tabel dan menekan tombol UPDATE, data buku yang sudah dimodifikasi pada form akan diperbarui di database dengan menggunakan perintah UPDATE.
 ### 4. ❌ [Delete](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
 Fungsi ini memungkinkan pengguna untuk menghapus data buku berdasarkan ID_Buku. Perintah DELETE FROM digunakan untuk menghapus data dari database.
-## 🐙 [DbUtils]()
+## 🐙 [DbUtils](https://github.com/Ifaa513/PBO8/blob/main/DbUtils.java)
 Program ini adalah sebuah utility class bernama DbUtils yang menyediakan metode untuk mengubah hasil query dari database berupa ResultSet menjadi objek TableModel. TableModel digunakan untuk menampilkan data dalam komponen GUI seperti JTable di Java Swing.
+
+### 🎁 Fitur Tambahan
+- [tblDataMouseClicked](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
+Fungsi ini dibuat untuk memudahkan pengguna agar tidak perlu mengisi ulang data buku yang ia pilih pada baris tabel untuk di update/di delete atau sekedar dilihat saja. Fungsi ini mengambil data dari baris yang diklik oleh pengguna dan menampilkannya ke dalam form input, seperti ID buku, judul buku, penulis, dst.
+- [Clear](https://github.com/Ifaa513/PBO8/blob/main/BukuFrame.java)
+Fungsi ini bekerja dengan mengosongkan semua input pada form, seperti menghapus teks di field ID buku, judul buku, penulis, dan lainnya. Tujuannya adalah untuk mereset form agar siap digunakan untuk memasukkan data baru atau menghindari kesalahan input ketika form masih berisi data sebelumnya.
